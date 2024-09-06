@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { LoaderCircle, LockIcon } from "lucide-react";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import DefaultLayout from "@/components/Layaouts/DefaultLayout";
 import Breadcrumb from "@/components/ComponentHeader/ComponentHeader";
 import { useRouter, useSearchParams } from "next/navigation";
 import { resetPassword } from "@/lib/actions/user.actions";

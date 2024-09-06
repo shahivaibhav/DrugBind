@@ -1,7 +1,7 @@
 import ComponetHeader from "@/components/ComponentHeader/ComponentHeader";
 import MoleculeBankTable from "@/components/MoleculeBank/MoleculeBankTable";
 
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import DefaultLayout from "@/components/Layaouts/DefaultLayout";
 
 const Page = () => {
   return (

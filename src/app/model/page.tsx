@@ -1,6 +1,6 @@
 "use client";
 import Breadcrumb from "@/components/ComponentHeader/ComponentHeader";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import DefaultLayout from "@/components/Layaouts/DefaultLayout";
 import MoleculeStructure from "../../components/MoleculeStructure/index";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";

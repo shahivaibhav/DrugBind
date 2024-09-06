@@ -1,5 +1,5 @@
 "use client";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import DefaultLayout from "@/components/Layaouts/DefaultLayout";
 import MoleculeStructure from "@/components/MoleculeStructure";
 import { useState } from "react";
 import { Search } from "lucide-react";

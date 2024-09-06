@@ -2,7 +2,7 @@
 import Breadcrumb from "@/components/ComponentHeader/ComponentHeader";
 import Image from "next/image";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import DefaultLayout from "@/components/Layaouts/DefaultLayout";
 import { CameraIcon } from "lucide-react";
 import { useUser } from "../context/UserContext";
 

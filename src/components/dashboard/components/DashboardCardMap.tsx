@@ -2,10 +2,9 @@
 import jsVectorMap from "jsvectormap";
 import "jsvectormap/dist/jsvectormap.css";
 import React, { useEffect } from "react";
-import "../../../js/us-aea-en";
 import "../../../js/world";
 
-const MapOne: React.FC = () => {
+const DashboardCardMap: React.FC = () => {
   useEffect(() => {
     const mapOne = new jsVectorMap({
       selector: "#mapOne",
@@ -62,4 +61,4 @@ const MapOne: React.FC = () => {
   );
 };
 
-export default MapOne;
+export default DashboardCardMap;
