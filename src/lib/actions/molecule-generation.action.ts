@@ -1,9 +1,8 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import MoleculeGenerationHistory from "../database/models/molecule-generation.model";
 import { connectToDatabase } from "../database/mongoose";
-import { handleError } from "../utils";
+import { handleError } from "../database/utils";
 import mongoose from "mongoose";
 
 export async function createMoleculeGenerationHistory(

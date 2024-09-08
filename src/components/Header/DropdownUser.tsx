@@ -1,51 +1,51 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useUser } from "@/app/context/UserContext";
-import { signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
+
+import { useState } from "react";
 import { ChevronDown, LogOut, Settings, User2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import ClickOutside from "@/components/ClickOutside";
+import { useUser } from "@/app/context/UserContext";
+import { signOut } from "next-auth/react";
 
 const DropdownUser = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const user = useUser();
+  const [dropdownOpen, SetdropdownOpen] = useState(false);
   const router = useRouter();
 
+  const user = useUser();
+
+
   const handleLogout = async () => {
-    await signOut({ redirect: false });
-    router.push("/auth-page/signin");
-  };
+    await signOut({redirect:false});
+    router.push('/auth-page/signin')
+  }
 
   return (
-    <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
+    <div>
       <Link
-        onClick={() => setDropdownOpen(!dropdownOpen)}
+        href={"#"}
+        onClick={() => SetdropdownOpen(!dropdownOpen)}
         className="flex items-center gap-4"
-        href="#"
       >
         <span className="hidden text-right lg:block">
-          <span className="block text-sm font-medium text-black dark:text-white">
-            {user.firstName} {user.lastName}
+          <span className="black text-sm font-medium text-black dark:text-white ">
+            {user.firstName}{user.lastName}
           </span>
-          <span className="block text-xs">{user.jobTitle}</span>
+          <span className="block text-xs"> {user.userBio} </span>
         </span>
 
         <span className="h-11 w-11 rounded-full">
-          <Image
+            <Image 
             width={80}
             height={80}
             src={user.photo}
-            className="rounded-full"
             style={{
-              width: "auto",
-              height: "auto",
+                width: 'auto',
+                height : 'auto'
             }}
             alt="User"
-          />
+            />
         </span>
-
         <ChevronDown />
       </Link>
 
@@ -80,8 +80,7 @@ const DropdownUser = () => {
           </button>
         </div>
       )}
-    </ClickOutside>
+    </div>
   );
 };
-
 export default DropdownUser;

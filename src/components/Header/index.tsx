@@ -1,9 +1,7 @@
-import Link from "next/link";
-import DarkModeSwitcher from "./DarkModeSwitcher";
+
 import DropdownMessage from "./DropdownMessage";
-import DropdownUser from "./DropdownUser";
-import Image from "next/image";
 import { SearchIcon } from "lucide-react";
+import DropdownUser from "./DropdownUser";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -75,8 +73,7 @@ const Header = (props: {
           <ul className="flex items-center gap-2 2xsm:gap-4">
             <DropdownMessage />
           </ul>
-
-          <DropdownUser />
+            <DropdownUser />
         </div>
       </div>
     </header>

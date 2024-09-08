@@ -2,7 +2,7 @@
 import mongoose from "mongoose";
 import Group from "../database/models/group.model";
 import { connectToDatabase } from "../database/mongoose";
-import { handleError } from "../utils";
+import { handleError } from "../database/utils";
 
 export async function createGroup(
   groupName: string,

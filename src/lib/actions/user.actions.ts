@@ -4,8 +4,9 @@ import { revalidatePath } from "next/cache";
 import bcrypt from "bcrypt";
 import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
-import { handleError } from "../utils";
+import { handleError } from "../database/utils";
 import { sendVerificationEmail, sendResetPasswordEmail } from "./email.actions";
+
 
 export async function createUser(user: CreateUserParams) {
   try {
@@ -22,7 +23,7 @@ export async function createUser(user: CreateUserParams) {
     const newUser = await User.create({
       ...user,
       password: hashedPassword,
-      userBio: user.userBio || "",
+      userBio: user.userBio || " ",
     });
 
     const verificationUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/verify-email?token=${newUser._id}`;

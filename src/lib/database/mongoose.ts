@@ -26,7 +26,7 @@ export const connectToDatabase = async () => {
   cached.promise =
     cached.promise ||
     mongoose.connect(MONGODB_URL, {
-      dbName: "proteinBind",
+      dbName: "drugBind",
       bufferCommands: false,
     });
 
